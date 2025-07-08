@@ -1,0 +1,62 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Georgia', serif;
+  scroll-behavior: smooth;
+  color: white;
+  background: black;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bg1 { background-image: url('./images/hogwarts.jpg'); }
+.bg2 { background-image: url('./images/forest.jpg'); }
+.bg3 { background-image: url('./images/duel.jpg'); }
+.bg4 { background-image: url('./images/map.jpg'); }
+
+.content {
+  padding: 80px 40px;
+  text-align: center;
+  background: #111;
+}
+
+h1.title {
+  font-size: 4rem;
+  color: gold;
+  text-shadow: 0 0 20px #fff, 0 0 40px gold;
+  animation: flicker 2s infinite alternate;
+}
+
+.glow {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 5px white, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  animation: glow 3s infinite alternate;
+}
+
+/* Animations */
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0 0 10px gold; }
+  50% { opacity: 0.8; text-shadow: 0 0 20px white; }
+  100% { opacity: 1; text-shadow: 0 0 30px gold; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px white, 0 0 20px #00ffff; }
+  to { text-shadow: 0 0 20px white, 0 0 40px #00ffff; }
+}
